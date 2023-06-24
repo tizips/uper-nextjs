@@ -1,0 +1,182 @@
+.btn {
+  float: right;
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  top: 48px;
+  right: -10px;
+
+  &:after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    display: block;
+    position: relative;
+    z-index: 1;
+    top: 4px;
+    left: 4px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 1px;
+    background: #ccc;
+    z-index: 0;
+    border-radius: 1px;
+    top: 24px;
+    left: 19px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+  }
+}
+
+.form {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+
+  &:before {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    content: '';
+    animation: search .4s;
+  }
+
+  .container {
+    width: 100%;
+    transition: 1s;
+    padding: 0 2%;
+    margin: -5% auto;
+    opacity: 1;
+    position: fixed;
+    z-index: 9;
+    top: 50%;
+    left: 0;
+    right: 0;
+    max-width: 600px;
+    animation: search .6s;
+
+    .micro {
+      color: #000;
+    }
+
+    :global {
+
+      input {
+        width: 100%;
+        background: none;
+        border: 0;
+        margin: auto;
+        line-height: 24px;
+        height: 48px;
+        border-bottom: 1px solid #ddd;
+        color: #333;
+        padding: 0 2% 0 48px;
+      }
+
+      button {
+        float: none;
+        position: relative;
+        background: none;
+        text-indent: -9999px;
+        border: 0;
+        left: 0;
+        top: -76px;
+
+        &:after {
+          content: '';
+          width: 24px;
+          height: 24px;
+          border-radius: 100%;
+          background: #fff;
+          display: block;
+          position: relative;
+          z-index: 1;
+          top: 33px;
+          left: 0;
+          background: none;
+          border: 1px solid #aaa;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 1px;
+          z-index: 0;
+          border-radius: 1px;
+          top: 58px;
+          left: 26px;
+          background: #aaa;
+          transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .close {
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    top: 40px;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    animation: search .6s;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      top: 8px;
+      background: #f55;
+      width: 100%;
+    }
+
+    &:after {
+      top: 11px;
+      transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+    }
+
+    &:before {
+      top: 12px;
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+    }
+  }
+}
+
+@keyframes search {
+  0% {
+    transform: scale(0);
+  }
+  55% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

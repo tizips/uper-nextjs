@@ -1,0 +1,135 @@
+:root {
+  --main-color: #f55;
+  --sm-width: 520px;
+  --md-width: 800px;
+
+  --shadow: 10px 10px 20px -15px rgba(0, 0, 0, .3), -10px 10px 20px -15px rgba(0, 0, 0, .3);
+}
+
+*, *:before, *:after {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e8ecef;
+
+  &:after {
+    content: '';
+    position: fixed;
+    background: #444;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: .2;
+  }
+}
+
+p {
+  color: #333;
+}
+
+br {
+  display: block;
+  line-height: 1.6em;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+input, textarea, button {
+  outline: none;
+}
+
+blockquote, q {
+  quotes: none;
+
+  &:before, &:after {
+    content: none;
+  }
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  color: var(--main-color);
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* 设置滚动条的滑轨 */
+::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
+
+/* 滑块 */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+}
+
+/* 滑轨两头的监听按钮 */
+::-webkit-scrollbar-button {
+  background-color: #888;
+  display: none;
+}
+
+.clearer {
+  display: block;
+  clear: both;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* Project id 3013203 */
+  src: url('//at.alicdn.com/t/font_3013203_dhdolu940w.woff2?t=1639400334120') format('woff2'),
+  url('//at.alicdn.com/t/font_3013203_dhdolu940w.woff?t=1639400334120') format('woff'),
+  url('//at.alicdn.com/t/font_3013203_dhdolu940w.ttf?t=1639400334120') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont", serif !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}

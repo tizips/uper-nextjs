@@ -1,0 +1,13 @@
+
+.container {
+  margin: 60px auto;
+  max-width: 800px;
+  width: 96%;
+  box-shadow: var(--shadow);
+  background: #fff;
+  border-radius: 5px;
+
+  @media(max-width: 800px) {
+    margin: 2% auto;
+  }
+}
