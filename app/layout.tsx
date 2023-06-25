@@ -10,6 +10,8 @@ import '@/styles/globals.scss';
 
 import styles from "@/app/layout.module.scss";
 
+export const revalidate = 600;
+
 const RootLayout = async ({children}: { children: React.ReactNode }) => {
 
     const setting = await doSetting();
@@ -20,7 +22,7 @@ const RootLayout = async ({children}: { children: React.ReactNode }) => {
         <div className={styles.container}>
             <Header name={setting?.name}/>
             {children}
-            <Link />
+            <Link/>
             <Footer setting={setting}/>
         </div>
         </body>
